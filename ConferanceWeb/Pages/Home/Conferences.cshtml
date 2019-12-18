@@ -1,0 +1,24 @@
+﻿@page
+@model ConferanceWeb.ConferencesModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Conferences</title>
+</head>
+<body>
+    @foreach (var conference in Model.Conferences)
+    {
+    <ul>
+        <li>@conference.Name</li>
+        <li>@conference.Location</li>
+        <li>@conference.Start.ToLongDateString()</li>
+    </ul>
+    }
+</body>
+</html>

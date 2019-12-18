@@ -1,0 +1,26 @@
+﻿@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model ConferanceWeb.ContactModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Contact</title>
+</head>
+<body>
+    <p>@Model.Title</p>
+    <p>@Model.Body</p>
+    <p>@Model.Email</p>
+    <form method="POST">
+        <div>Tytuł<input asp-for="@Model.Title" /></div>
+        <div>Treść<input asp-for="@Model.Body" /></div>
+        <div>Email<input asp-for="@Model.Email" /></div>
+        <input type="submit" />
+    </form>
+</body>
+</html>
